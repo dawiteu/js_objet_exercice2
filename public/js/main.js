@@ -3,12 +3,12 @@ let pers = {
 
     panier: {
         chocolat: 2, 
-        tartine: 3.50 
+        tartine: 3.50
     },
 
     achats(){
         for(x in this.panier){
-            this.argent -=this.panier[x]; 
+            this.argent -= this.panier[x]; 
         }
         return `Apès vos ${Object.keys(this.panier).length} achats, il vous reste ${this.argent} `;
     }
@@ -18,6 +18,23 @@ console.log(pers.achats());
 
 
 
+// exo 2 
+let vieille_dame = {
+    age: 18122, 
+    nom: {
+        prenom: "Jaquelinne", 
+        nom: "Duponte" // (dupont c'est au masculin #égalité!) 
+    },
+    moral: "bien", // mal ou bien sinon elle sait pas 
+    objet: "canne",
+
+    se_plaindre(){
+        x=(this.moral == "mal") ? "Vous me dérangez" : x=(this.moral == "bien") ? "Bonjour Monsieur " : "Je ne sais pas au fait..." ; 
+        return x;
+    }
+}
+
+console.log(vieille_dame.se_plaindre());
 
 
 
